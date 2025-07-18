@@ -1,69 +1,137 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🌦️ Climate — Your Smart Weather Companion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### A modern, sleek weather application built with React + TypeScript + Vite. Featuring:
 
-## Expanding the ESLint configuration
+* 🌍 **Real-time Weather Data** (OpenWeatherMap API)
+* 🌙 **Dark & Light Theme Toggle**
+* ⭐ **Favorite Locations with LocalStorage**
+* 🔍 **Smart Search with Suggestions & History**
+* 📈 **Hourly & 5-Day Forecasts**
+* 📌 **Responsive & Interactive UI**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+[🔗 Live Site (Optional)](https://climate.vercel.app)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+---
+
+## 🧠 Features
+
+* ✅ Current weather by **city or location**
+* ✅ Hourly temperature chart (Today)
+* ✅ 5-day forecast (min/max temp, humidity, wind)
+* ✅ Weather details: pressure, wind direction, sunrise/sunset
+* ✅ **Add/remove favorite cities** with a single click
+* ✅ **Persist search history** across sessions
+* ✅ Elegant **dark/light mode** with system preference support
+
+---
+
+## 🛠️ Built With
+
+* ⚛️ [React](https://react.dev/)
+* 🟦 [TypeScript](https://www.typescriptlang.org/)
+* ⚡ [Vite](https://vitejs.dev/)
+* 💨 [Tailwind CSS](https://tailwindcss.com/)
+* 📦 [OpenWeatherMap API](https://openweathermap.org/api)
+* 🌘 [next-themes](https://github.com/pacocoursey/next-themes) *(if using Next.js)*
+* 📦 [Sonner](https://ui.shadcn.dev/docs/components/sonner) for toast notifications
+
+---
+
+## 📂 Folder Structure
+
+```
+/src
+  ├── components/          # UI Components
+  ├── hooks/               # Custom React Hooks (e.g., useFavourites, useWeather)
+  ├── api/                 # API interaction logic
+  ├── assets/              # Static icons & images
+  ├── pages/               # Main page layout
+  ├── styles/              # Tailwind or custom styles
+  └── App.tsx              # Main entry
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌐 Environment Setup
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repo**:
+
+```bash
+git clone https://github.com/SATYAPRAKASH1419/Climate.git
+cd Climate
 ```
+
+2. **Install dependencies**:
+
+```bash
+npm install
+```
+
+3. **Create `.env` file**:
+
+```env
+VITE_WEATHER_API_KEY=your_openweather_api_key
+```
+
+> Get yours from [https://openweathermap.org/api](https://openweathermap.org/api)
+
+4. **Run the app**:
+
+```bash
+npm run dev
+```
+
+5. **Build for production**:
+
+```bash
+npm run build
+```
+
+---
+
+## 💾 Local Storage Keys Used
+
+| Key              | Purpose                 |
+| ---------------- | ----------------------- |
+| `favorites`      | Stores favorite cities  |
+| `recentSearches` | Stores search history   |
+| `theme`          | Stores theme preference |
+
+---
+
+## 📌 Todo / Improvements
+
+* [ ] Add map view of location
+* [ ] Offline cache
+* [ ] Real-time precipitation radar
+* [ ] Progressive Web App (PWA) support
+
+---
+
+## 🤝 Contribution
+
+Pull requests welcome! If you find any bugs or want to suggest new features, feel free to open an issue.
+
+---
+
+## 🧑‍💻 Author
+
+**Satya Prakash Swain**
+🔗 [GitHub](https://github.com/SATYAPRAKASH1419)
+
+---
+
+## 📄 License
+
+MIT License. © 2025 Satya Prakash Swain
+
+---
+
